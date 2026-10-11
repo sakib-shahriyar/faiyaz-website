@@ -59,12 +59,13 @@ const PACKAGES = [
     name: "Starter",
     speed: 20,                 // Mbps
     price: 500,                // Taka per month
-    badge: "Entry",            // e.g. "Most Popular" — or "" for none
+    badge: "",            // e.g. "Most Popular" — or "" for none
     features: [
-      "Facebook BDIX 250 Mbps",
-      "YouTube BDIX 250 Mbps",
-      "Own FTP server",
-      "Low latency"
+      "Facebook Bufferless",
+      "Youtube Bufferless",
+      "BDIX 250Mbps",
+      "Own FTP",
+      "Low Latency"
     ]
   },
   {
@@ -73,22 +74,24 @@ const PACKAGES = [
     price: 550,
     badge: "",
     features: [
-      "Facebook BDIX 250 Mbps",
-      "YouTube BDIX 250 Mbps",
-      "Own FTP server",
-      "Low latency"
+      "Facebook Bufferless",
+      "Youtube Bufferless",
+      "BDIX 250Mbps",
+      "Own FTP",
+      "Low Latency"
     ]
   },
   {
     name: "Standard",
     speed: 40,
     price: 650,
-    badge: "",
+    badge: "Best Value",
     features: [
-      "Facebook BDIX 250 Mbps",
-      "YouTube BDIX 250 Mbps",
-      "Own FTP server",
-      "Low latency"
+      "Facebook Bufferless",
+      "Youtube Bufferless",
+      "BDIX 250Mbps",
+      "Own FTP",
+      "Low Latency"
     ]
   },
   {
@@ -97,10 +100,11 @@ const PACKAGES = [
     price: 750,
     badge: "Most Popular",
     features: [
-      "Facebook BDIX 250 Mbps",
-      "YouTube BDIX 250 Mbps",
-      "Own FTP server",
-      "Low latency"
+      "Facebook Bufferless",
+      "Youtube Bufferless",
+      "BDIX 250Mbps",
+      "Own FTP",
+      "Low Latency"
     ]
   },
   {
@@ -109,10 +113,11 @@ const PACKAGES = [
     price: 850,
     badge: "",
     features: [
-      "Facebook BDIX 250 Mbps",
-      "YouTube BDIX 250 Mbps",
-      "Own FTP server",
-      "Low latency"
+      "Facebook Bufferless",
+      "Youtube Bufferless",
+      "BDIX 250Mbps",
+      "Own FTP",
+      "Low Latency"
     ]
   },
   {
@@ -121,10 +126,11 @@ const PACKAGES = [
     price: 1050,
     badge: "Best Value",
     features: [
-      "Facebook BDIX 250 Mbps",
-      "YouTube BDIX 250 Mbps",
-      "Own FTP server",
-      "Low latency"
+      "Facebook Bufferless",
+      "Youtube Bufferless",
+      "BDIX 250Mbps",
+      "Own FTP",
+      "Low Latency"
     ]
   },
   {
@@ -133,10 +139,11 @@ const PACKAGES = [
     price: 1200,
     badge: "",
     features: [
-      "Facebook BDIX 250 Mbps",
-      "YouTube BDIX 250 Mbps",
-      "Own FTP server",
-      "Low latency"
+      "Facebook Bufferless",
+      "Youtube Bufferless",
+      "BDIX 250Mbps",
+      "Own FTP",
+      "Low Latency"
     ]
   },
   {
@@ -145,10 +152,11 @@ const PACKAGES = [
     price: 1500,
     badge: "Elite",
     features: [
-      "Facebook BDIX 250 Mbps",
-      "YouTube BDIX 250 Mbps",
-      "Own FTP server",
-      "Low latency"
+      "Facebook Bufferless",
+      "Youtube Bufferless",
+      "BDIX 250Mbps",
+      "Own FTP",
+      "Low Latency"
     ]
   }
 ];
@@ -181,9 +189,9 @@ const FAQS = [
   },
   {
     q: "What do I need for a new connection?",
-    a: "Just your name, mobile number and address. Our team brings the router and handles the full setup for you.",
+    a: "Just your name, mobile number and address. Our team brings the necessary items and handles the full setup for you.",
     q_bn: "নতুন সংযোগের জন্য আমার কী কী লাগবে?",
-    a_bn: "শুধু আপনার নাম, মোবাইল নম্বর ও ঠিকানা। আমাদের টিম রাউটার নিয়ে আসবে এবং সম্পূর্ণ সেটআপ করে দেবে।"
+    a_bn: "শুধু আপনার নাম, মোবাইল নম্বর ও ঠিকানা। আমাদের টিম প্রয়োজনীয় জিনিসপত্র নিয়ে আসবে এবং সম্পূর্ণ সেটআপ করে দেবে।"
   },
   {
     q: "Do you provide support if the internet goes down?",

@@ -155,7 +155,7 @@
     observeReveals();
   }
 
-  /* ---------- Feature image slider (language-aware, 5s interval) ---------- */
+  /* ---------- Feature image slider (language-aware, 3s interval) ---------- */
   var updateSliderLang = null;
   function initFeatureSlider() {
     var slider = document.getElementById("featureSlider");
