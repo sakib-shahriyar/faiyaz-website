@@ -21,7 +21,7 @@ bn: {
   "nav.packages": "প্যাকেজ",
   "nav.ftp": "FTP",
   "nav.contact": "যোগাযোগ",
-  "nav.paybill": "💳 বিল পে করুন",
+  "nav.paybill": "💳 বিল পে",
   "nav.label": "প্রধান নেভিগেশন",
   "misc.menu": "মেনু খুলুন",
   "alt.logo": "ফাইয়াজ কমিউনিকেশন লোগো",
@@ -33,12 +33,12 @@ bn: {
 
   /* ---- hero (home) ---- */
   "hero.badge": "নতুন এলাকায় সংযোগ চলছে",
-  "hero.title": 'বজ্রগতির ফাইবার ইন্টারনেট, <span class="accent">এখন হাতের মুঠোয়।</span>', // (html)
+  "hero.title": 'দ্রুতগতির ফাইবার ইন্টারনেট, <span class="accent">এখন হাতের মুঠোয়।</span>', // (html)
   "hero.packages": "প্যাকেজ দেখুন",
-  "hero.paybill": "💳 অনলাইনে বিল পে করুন",
+  "hero.paybill": "💳 অনলাইন বিল পে",
   "stat.uptime": "নেটওয়ার্ক আপটাইম",
   "stat.install": "ইনস্টলেশনের সময়",
-  "stat.support": "প্রতি সপ্তাহে সাপোর্ট",
+  "stat.support": "সাপোর্ট",
 
   /* ---- rotating package card (home) ---- */
   "rot.getPlan": "এই প্ল্যানটি নিন",
@@ -47,31 +47,31 @@ bn: {
   /* ---- why us ---- */
   "feat.kicker": "কেন ফাইয়াজ কমিউনিকেশন",
   "feat.title": "ঝামেলাহীন ইন্টারনেট",
-  "feat.sub": "কোনো লুকানো চার্জ নেই, কোনো জটিল শর্ত নেই — শুধু দ্রুত ইন্টারনেট আর ফোন ধরা মানুষ।",
-  "feat.1t": "খাঁটি ফাইবার গতি",
+  "feat.sub": "কোনো লুকানো চার্জ নেই, কোনো জটিল শর্ত নেই — শুধু দ্রুত ইন্টারনেট।",
+  "feat.1t": "ফাইবার গতি",
   "feat.1d": "আধুনিক ফাইবার-অপটিক লাইনে দিনে ও সন্ধ্যার ব্যস্ত সময়েও আপনি যে গতির জন্য পেমেন্ট করছেন, সেই গতিই পাবেন।",
-  "feat.2t": "সত্যিকারের আনলিমিটেড",
+  "feat.2t": "আনলিমিটেড ডাটা",
   "feat.2d": "প্রতিটি প্যাকেজে আনলিমিটেড ডেটা। যত খুশি স্ট্রিম করুন, গেম খেলুন, কাজ করুন — কোনো ক্যাপ বা স্লোডাউন নেই।",
-  "feat.3t": "স্থানীয় আন্তরিক সাপোর্ট",
+  "feat.3t": "আন্তরিক সাপোর্ট",
   "feat.3d": 'আমাদের নিজস্ব সাপোর্ট টিমের সাথে কথা বলুন — কোনো কল সেন্টার নয়। প্রতিদিন সকাল ৯টা থেকে রাত ১০টা পর্যন্ত <a href="tel:{{phoneRaw}}" style="font-weight:700;color:var(--green-dark)">{{phone}}</a> নম্বরে কল করুন।', // (html)
 
   /* ---- package previews (home) ---- */
   "pkg.kicker": "প্যাকেজ",
   "pkg.title": "সহজ প্ল্যান, সৎ দাম",
   "pkg.sub": "আপনার বাসার জন্য মানানসই গতি বেছে নিন। যেকোনো সময় আপগ্রেড বা ডাউনগ্রেড করুন।",
-  "pkg.seeAll": "সব প্যাকেজ দেখুন",
+  "pkg.seeAll": "প্যাকেজসমূহ দেখুন",
   "pkg.perMonth": "/মাস",
   "pkg.get": "এই প্যাকেজটি নিন",
 
   /* ---- steps ---- */
   "step.kicker": "সংযোগ নিন",
-  "step.title": "৩টি সহজ ধাপে অনলাইনে আসুন",
+  "step.title": "৩টি সহজ ধাপে সংযোগ নিন",
   "step.1t": "প্যাকেজ বেছে নিন",
   "step.1d": "প্যাকেজগুলো দেখুন এবং আপনার পরিবার বা ব্যবসার জন্য উপযুক্ত গতি বেছে নিন।",
   "step.2t": "কল বা মেসেজ করুন",
   "step.2d": '<a href="tel:{{phoneRaw}}" style="font-weight:700;color:var(--green-dark)">{{phone}}</a> নম্বরে কল করুন অথবা হোয়াটসঅ্যাপে আপনার ঠিকানা পাঠান।', // (html)
   "step.3t": "আমরা ইনস্টল করব, আপনি নিশ্চিন্ত থাকুন",
-  "step.3d": "২৪–৪৮ ঘণ্টার মধ্যে আমাদের টেকনিশিয়ান সম্পূর্ণ সেটআপ করে দেবে। যেকোনো সময় অনলাইনে বিল পে করুন।",
+  "step.3d": "দ্রুত সময়ের মধ্যে আমাদের টেকনিশিয়ান সম্পূর্ণ সেটআপ করে দেবে। যেকোনো সময় অনলাইনে বিল পে করুন।",
 
   /* ---- faq ---- */
   "faq.kicker": "সাধারণ জিজ্ঞাসা",
@@ -81,7 +81,7 @@ bn: {
   "cta.title": "আপনার বিল মাত্র এক ক্লিক দূরে",
   "cta.sub": "আমাদের নিরাপদ কাস্টমার পোর্টাল থেকে বিকাশ, নগদ, রকেট বা কার্ড দিয়ে পেমেন্ট করুন।",
   "cta.btn": "💳 এখনই বিল পে করুন",
-  "cta2.title": "ইতিমধ্যে গ্রাহক?",
+  "cta2.title": "ইতিমধ্যে আমাদের গ্রাহক?",
   "cta2.sub": "আমাদের নিরাপদ কাস্টমার পোর্টাল থেকে এক মিনিটেরও কম সময়ে মাসিক বিল পে করুন।",
 
   /* ---- footer ---- */
@@ -92,8 +92,8 @@ bn: {
 
   /* ---- packages page ---- */
   "ph.title": "আমাদের প্যাকেজ",
-  "ph.sub": "সব প্ল্যানে আনলিমিটেড ডেটা, ফ্রি ইনস্টলেশন সাপোর্ট ও বন্ধুসুলভ স্থানীয় সেবা রয়েছে। দাম প্রতি মাসে টাকায়।",
-  "chip.all": "সব গতি",
+  "ph.sub": "সব প্ল্যানে আনলিমিটেড ডেটা, ফ্রি ইনস্টলেশন সাপোর্ট ও বন্ধুসুলভ সেবা রয়েছে।",
+  "chip.all": "সকল প্যাকেজ",
   "chip.basic": "30 Mbps পর্যন্ত",
   "chip.mid": "40 – 60 Mbps",
   "chip.fast": "70+ Mbps",
@@ -101,7 +101,7 @@ bn: {
 
   /* ---- contact page ---- */
   "ct.title": "যোগাযোগ করুন",
-  "ct.sub": "নতুন সংযোগ, বিলিং প্রশ্ন বা সাপোর্ট — যেকোনোভাবে আমাদের সাথে যোগাযোগ করুন। আমরা দ্রুত সাড়া দিই।",
+  "ct.sub": "নতুন সংযোগ, বিলিং প্রশ্ন বা সাপোর্ট — যেকোনোভাবে আমাদের সাথে যোগাযোগ করুন।",
   "ct.hotline": "হটলাইন",
   "ct.hotlineSub": "প্রতিদিন কল করুন, সকাল ৯:০০ – রাত ১০:০০",
   "ct.wa": "হোয়াটসঅ্যাপ",
@@ -116,7 +116,7 @@ bn: {
   "ct.phone": "ফোন নম্বর",
   "ct.phonePh": "01XXXXXXXXX",
   "ct.phoneHint": "যাতে আপনার অনুরোধ সম্পর্কে আমরা কল করে জানাতে পারি।",
-  "ct.topic": "বিষয় কী?",
+  "ct.topic": "কী বিষয়?",
   "ct.t1": "নতুন সংযোগ",
   "ct.t2": "বিলিং সংক্রান্ত প্রশ্ন",
   "ct.t3": "টেকনিক্যাল সাপোর্ট",
@@ -195,7 +195,7 @@ en: {
   "step.2t": "Call or message us",
   "step.2d": 'Reach us on <a href="tel:{{phoneRaw}}" style="font-weight:700;color:var(--green-dark)">{{phone}}</a> or WhatsApp and share your address.', // (html)
   "step.3t": "We install, you relax",
-  "step.3d": "Our technician sets everything up within 24–48 hours. Pay your bill online anytime.",
+  "step.3d": "Our technician sets everything up pretty quick. Pay your bill online anytime.",
 
   /* ---- faq ---- */
   "faq.kicker": "FAQ",
@@ -204,7 +204,7 @@ en: {
   /* ---- call to action ---- */
   "cta.title": "Your bill is one click away",
   "cta.sub": "Pay securely with bKash, Nagad, Rocket or cards through our customer portal.",
-  "cta.btn": "💳 Pay Bill Now",
+  "cta.btn": "💳 Bill Pay",
   "cta2.title": "Already a customer?",
   "cta2.sub": "Pay your monthly bill in under a minute through our secure customer portal.",
 
