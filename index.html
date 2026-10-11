@@ -6,7 +6,7 @@
   <title data-i18n="title.home">ফাইয়াজ কমিউনিকেশন — দ্রুত, নির্ভরযোগ্য ইন্টারনেট</title>
   <meta name="description" content="Faiyaz Communication — fast, reliable fiber internet for home and business. View packages, pay your bill online, or contact our support team.">
   <link rel="icon" type="image/png" href="assets/favicon.png">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css?v=2">
 </head>
 <body>
 
@@ -26,7 +26,7 @@
         <li><a class="nav-link" href="packages.html" data-i18n="nav.packages">প্যাকেজ</a></li>
         <li><a class="nav-link" data-ftp href="#">FTP</a></li>
         <li><a class="nav-link" href="contact.html" data-i18n="nav.contact">যোগাযোগ</a></li>
-        <li><a class="nav-link paybill-btn" data-paybill data-i18n="nav.paybill" href="#">💳 বিল পে </a></li>
+        <li><a class="nav-link paybill-btn" data-paybill data-i18n="nav.paybill" href="#">💳 বিল পে করুন</a></li>
         <li>
           <span class="lang-switch" role="group" aria-label="Language / ভাষা">
             <button type="button" data-setlang="bn" class="active">বাং</button><button type="button" data-setlang="en">EN</button>
@@ -37,21 +37,41 @@
   </div>
 </header>
 
+<!-- ================= FEATURE SLIDER ================= -->
+<section class="slider-section">
+  <div class="container">
+    <div class="feat-slider" id="featureSlider">
+      <div class="feat-slides">
+        <div class="feat-slide active">
+          <a href="packages.html"><img src="assets/slide-home.webp" data-src-bn="assets/slide-home.webp" data-src-en="assets/slide-home-en.webp" data-i18n-alt="slide.home" alt="হোম ইন্টারনেট ফিচার"></a>
+        </div>
+        <div class="feat-slide">
+          <a href="packages.html"><img src="assets/slide-gaming.webp" data-src-bn="assets/slide-gaming.webp" data-src-en="assets/slide-gaming-en.webp" data-i18n-alt="slide.gaming" alt="গেমিং ফিচার"></a>
+        </div>
+        <div class="feat-slide">
+          <a href="packages.html"><img src="assets/slide-freelancing.webp" data-src-bn="assets/slide-freelancing.webp" data-src-en="assets/slide-freelancing-en.webp" data-i18n-alt="slide.freelancing" alt="ফ্রিল্যান্সিং ফিচার"></a>
+        </div>
+      </div>
+      <div class="feat-dots" id="featureDots"></div>
+    </div>
+  </div>
+</section>
+
 <!-- ================= HERO ================= -->
 <section class="hero">
   <div class="container hero-grid">
     <div>
       <span class="hero-badge"><span class="dot"></span><span data-i18n="hero.badge">নতুন এলাকায় সংযোগ চলছে</span></span>
-      <h1 data-i18n-html="hero.title">দ্রুতগতির ফাইবার ইন্টারনেট, <span class="accent">এখন হাতের মুঠোয়।</span></h1>
+      <h1 data-i18n-html="hero.title">বজ্রগতির ফাইবার ইন্টারনেট, <span class="accent">এখন হাতের মুঠোয়।</span></h1>
       <p class="lead" data-site="aboutShort"></p>
       <div class="hero-actions">
         <a class="btn btn-primary" href="packages.html" data-i18n="hero.packages">প্যাকেজ দেখুন</a>
-        <a class="btn btn-outline" data-paybill data-i18n="hero.paybill" href="#">💳 অনলাইন বিল পে</a>
+        <a class="btn btn-outline" data-paybill data-i18n="hero.paybill" href="#">💳 অনলাইনে বিল পে করুন</a>
       </div>
       <div class="hero-stats">
-        <div class="stat"><b>99%</b><span data-i18n="stat.uptime">নেটওয়ার্ক আপটাইম</span></div>
-        <div class="stat"><b>24–48h</b><span data-i18n="stat.install">ইনস্টলেশনের সময়</span></div>
-        <div class="stat"><b>7 days</b><span data-i18n="stat.support">সাপোর্ট</span></div>
+        <div class="stat"><b>100%</b><span data-i18n="stat.uptime">নেটওয়ার্ক আপটাইম</span></div>
+        <div class="stat"><b>Quick</b><span data-i18n="stat.install">ইনস্টলেশনের সময়</span></div>
+        <div class="stat"><b>7 days</b><span data-i18n="stat.support">প্রতি সপ্তাহে সাপোর্ট</span></div>
       </div>
     </div>
     <div class="hero-card reveal" id="packageRotator">
@@ -66,22 +86,22 @@
     <div class="section-title reveal">
       <div class="kicker" data-i18n="feat.kicker">কেন ফাইয়াজ কমিউনিকেশন</div>
       <h2 data-i18n="feat.title">ঝামেলাহীন ইন্টারনেট</h2>
-      <p data-i18n="feat.sub">কোনো লুকানো চার্জ নেই, কোনো জটিল শর্ত নেই — শুধু দ্রুত ইন্টারনেট।</p>
+      <p data-i18n="feat.sub">কোনো লুকানো চার্জ নেই, কোনো জটিল শর্ত নেই — শুধু দ্রুত ইন্টারনেট আর ফোন ধরা মানুষ।</p>
     </div>
     <div class="features">
       <div class="feature-card reveal">
         <div class="feature-icon">🚀</div>
-        <h3 data-i18n="feat.1t">ফাইবার গতি</h3>
+        <h3 data-i18n="feat.1t">খাঁটি ফাইবার গতি</h3>
         <p data-i18n="feat.1d">আধুনিক ফাইবার-অপটিক লাইনে দিনে ও সন্ধ্যার ব্যস্ত সময়েও আপনি যে গতির জন্য পেমেন্ট করছেন, সেই গতিই পাবেন।</p>
       </div>
       <div class="feature-card reveal">
         <div class="feature-icon">♾️</div>
-        <h3 data-i18n="feat.2t"> আনলিমিটেড ডাটা</h3>
+        <h3 data-i18n="feat.2t">সত্যিকারের আনলিমিটেড</h3>
         <p data-i18n="feat.2d">প্রতিটি প্যাকেজে আনলিমিটেড ডেটা। যত খুশি স্ট্রিম করুন, গেম খেলুন, কাজ করুন — কোনো ক্যাপ বা স্লোডাউন নেই।</p>
       </div>
       <div class="feature-card reveal">
         <div class="feature-icon">🤝</div>
-        <h3 data-i18n="feat.3t"> আন্তরিক সাপোর্ট</h3>
+        <h3 data-i18n="feat.3t">স্থানীয় আন্তরিক সাপোর্ট</h3>
         <p data-i18n-html="feat.3d"></p>
       </div>
     </div>
@@ -109,7 +129,7 @@
   <div class="container">
     <div class="section-title reveal">
       <div class="kicker" data-i18n="step.kicker">সংযোগ নিন</div>
-      <h2 data-i18n="step.title">৩টি সহজ ধাপে সংযোগ নিন</h2>
+      <h2 data-i18n="step.title">৩টি সহজ ধাপে অনলাইনে আসুন</h2>
     </div>
     <div class="steps">
       <div class="step reveal">
@@ -125,7 +145,7 @@
       <div class="step reveal">
         <div class="num">3</div>
         <h3 data-i18n="step.3t">আমরা ইনস্টল করব, আপনি নিশ্চিন্ত থাকুন</h3>
-        <p data-i18n="step.3d">দ্রুত সময়ের মধ্যে আমাদের টেকনিশিয়ান সম্পূর্ণ সেটআপ করে দেবে। যেকোনো সময় অনলাইনে বিল পে করুন।</p>
+        <p data-i18n="step.3d">২৪–৪৮ ঘণ্টার মধ্যে আমাদের টেকনিশিয়ান সম্পূর্ণ সেটআপ করে দেবে। যেকোনো সময় অনলাইনে বিল পে করুন।</p>
       </div>
     </div>
   </div>
@@ -192,6 +212,6 @@
 
 <script src="js/site-config.js"></script>
 <script src="js/i18n.js"></script>
-<script src="js/main.js"></script>
+<script src="js/main.js?v=2"></script>
 </body>
 </html>

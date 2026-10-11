@@ -84,8 +84,19 @@ nav.main-nav a.nav-link.active { background: var(--soft); color: var(--green-dar
 .menu-toggle { display: none; background: none; border: none; cursor: pointer; padding: 10px; }
 .menu-toggle span { display: block; width: 24px; height: 2.5px; background: var(--ink); margin: 5px 0; border-radius: 2px; transition: 0.25s; }
 
+/* ---------- Feature image slider (under navbar) ---------- */
+.slider-section { padding: 34px 0 6px; }
+.feat-slider { position: relative; }
+.feat-slides { border-radius: 20px; overflow: hidden; border: 1px solid var(--line); box-shadow: var(--shadow); }
+.feat-slide { display: none; }
+.feat-slide.active { display: block; animation: featFade 0.6s ease; }
+@keyframes featFade { from { opacity: 0.35; } to { opacity: 1; } }
+.feat-slide img { width: 100%; height: auto; display: block; }
+.feat-slide a { display: block; cursor: pointer; }
+.feat-dots { display: flex; gap: 8px; justify-content: center; margin-top: 16px; }
+
 /* ---------- Hero ---------- */
-.hero { padding: 88px 0 72px; background: linear-gradient(180deg, var(--soft) 0%, #fff 100%); overflow: hidden; }
+.hero { padding: 46px 0 72px; background: linear-gradient(180deg, var(--soft) 0%, #fff 100%); overflow: hidden; }
 .hero-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 48px; align-items: center; }
 
 .hero-badge {

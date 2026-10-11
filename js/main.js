@@ -100,6 +100,7 @@
     renderPackages();
     renderRotator();
     renderFaq();
+    if (updateSliderLang) updateSliderLang();
     observeReveals();
   }
   document.querySelectorAll("[data-setlang]").forEach(function (btn) {
@@ -154,7 +155,59 @@
     observeReveals();
   }
 
-  /* ---------- Home hero: rotating package showcase (changes every 2 sec) ---------- */
+  /* ---------- Feature image slider (language-aware, 5s interval) ---------- */
+  var updateSliderLang = null;
+  function initFeatureSlider() {
+    var slider = document.getElementById("featureSlider");
+    if (!slider) return;
+    var slides = Array.prototype.slice.call(slider.querySelectorAll(".feat-slide"));
+    var dotsWrap = document.getElementById("featureDots");
+    if (!slides.length || !dotsWrap) return;
+    var idx = 0, timer = null;
+
+    dotsWrap.innerHTML = slides.map(function (_, i) {
+      return '<button type="button" class="rot-dot' + (i === 0 ? " active" : "") +
+        '" data-i="' + i + '" aria-label="Slide ' + (i + 1) + '"></button>';
+    }).join("");
+    var dots = Array.prototype.slice.call(dotsWrap.querySelectorAll(".rot-dot"));
+
+    /* swap Bangla / English image set when the language changes */
+    function setImages() {
+      slides.forEach(function (s) {
+        var img = s.querySelector("img");
+        if (!img) return;
+        var src = img.getAttribute(lang === "bn" ? "data-src-bn" : "data-src-en");
+        if (src && img.getAttribute("src") !== src) img.setAttribute("src", src);
+      });
+    }
+    function show(n) {
+      idx = (n + slides.length) % slides.length;
+      slides.forEach(function (s, i) { s.classList.toggle("active", i === idx); });
+      dots.forEach(function (d, i) { d.classList.toggle("active", i === idx); });
+    }
+    function start() {
+      stop();
+      timer = setInterval(function () { show(idx + 1); }, 3000);
+    }
+    function stop() {
+      if (timer) { clearInterval(timer); timer = null; }
+    }
+
+    dots.forEach(function (d) {
+      d.addEventListener("click", function () {
+        show(parseInt(d.getAttribute("data-i"), 10));
+        start();
+      });
+    });
+    slider.addEventListener("mouseenter", stop);
+    slider.addEventListener("mouseleave", start);
+
+    updateSliderLang = setImages;
+    setImages();
+    start();
+  }
+
+  /* ---------- Home hero: rotating package showcase (changes every 3 sec) ---------- */
   function renderRotator() {
     var slot = document.getElementById("packageRotator");
     if (!slot || !packages.length) return;
@@ -199,7 +252,7 @@
     }
     function start() {
       stop();
-      timer = setInterval(function () { show(idx + 1); }, 2000);
+      timer = setInterval(function () { show(idx + 1); }, 3000);
     }
     function stop() {
       if (timer) { clearInterval(timer); timer = null; }
@@ -353,5 +406,6 @@
   renderPackages();
   renderRotator();
   renderFaq();
+  initFeatureSlider();
   observeReveals();
 })();
