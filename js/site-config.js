@@ -23,6 +23,7 @@ const SITE = {
   name: "FAIYAZ COMMUNICATION",                 // company name
   tagline: "24x7 Fast, reliable internet for home & business",  // short slogan under the logo
   aboutShort: "Stay connected 24x7 with the area's fast, reliable internet. Watch live TV, videos and play games with low latency.",
+  aboutShortBn: "এলাকার দ্রুত ও নির্ভরযোগ্য ইন্টারনেটে ২৪x৭ সংযুক্ত থাকুন। কম ল্যাটেন্সিতে লাইভ টিভি, ভিডিও দেখুন এবং গেম খেলুন।",
 
   // ---- Contact details (shown on Contact page + footer) ----
   phone: "+8801303989230",        // used for the tap-to-call link (no spaces)
@@ -162,23 +163,33 @@ const PACKAGES = [
 const FAQS = [
   {
     q: "How do I pay my monthly bill?",
-    a: "Click the “Pay Bill” button at the top of this website. It takes you to our secure customer portal at user.fccloud.net where you can pay with bKash, Nagad, Rocket or cards."
+    a: "Click the “Pay Bill” button at the top of this website. It takes you to our secure customer portal at user.fccloud.net where you can pay with bKash, Nagad, Rocket or cards.",
+    q_bn: "আমি মাসিক বিল কীভাবে পে করব?",
+    a_bn: "এই ওয়েবসাইটের উপরে “বিল পে করুন” বাটনে ক্লিক করুন। এটি আপনাকে আমাদের নিরাপদ কাস্টমার পোর্টাল user.fccloud.net-এ নিয়ে যাবে, যেখানে বিকাশ, নগদ, রকেট বা কার্ডে পেমেন্ট করতে পারবেন।"
   },
   {
     q: "Is there really no data limit?",
-    a: "Correct. All our packages come with truly unlimited data — no fair-use slowdowns, no hidden caps."
+    a: "Correct. All our packages come with truly unlimited data — no fair-use slowdowns, no hidden caps.",
+    q_bn: "সত্যিই কি কোনো ডেটা লিমিট নেই?",
+    a_bn: "ঠিক। আমাদের সব প্যাকেজে সত্যিকারের আনলিমিটেড ডেটা — কোনো ফেয়ার-ইউজ স্লোডাউন বা লুকানো ক্যাপ নেই।"
   },
   {
     q: "How long does installation take?",
-    a: "Usually 24–48 hours inside our coverage area. Call our hotline and we will schedule a visit at a time that suits you."
+    a: "Usually 24–48 hours inside our coverage area. Call our hotline and we will schedule a visit at a time that suits you.",
+    q_bn: "ইনস্টলেশন করতে কত সময় লাগে?",
+    a_bn: "আমাদের কভারেজ এলাকায় সাধারণত ২৪–৪৮ ঘণ্টা। হটলাইনে কল করুন, আপনার সুবিধামতো সময়ে ভিজিটের শিডিউল করে দেব।"
   },
   {
     q: "What do I need for a new connection?",
-    a: "Just your name, mobile number and address. Our team brings the router and handles the full setup for you."
+    a: "Just your name, mobile number and address. Our team brings the router and handles the full setup for you.",
+    q_bn: "নতুন সংযোগের জন্য আমার কী কী লাগবে?",
+    a_bn: "শুধু আপনার নাম, মোবাইল নম্বর ও ঠিকানা। আমাদের টিম রাউটার নিয়ে আসবে এবং সম্পূর্ণ সেটআপ করে দেবে।"
   },
   {
     q: "Do you provide support if the internet goes down?",
-    a: "Yes. Call our hotline any day between 9:00 AM and 10:00 PM and our local support team will help you right away."
+    a: "Yes. Call our hotline any day between 9:00 AM and 10:00 PM and our local support team will help you right away.",
+    q_bn: "ইন্টারনেট বন্ধ হয়ে গেলে কি সাপোর্ট পাব?",
+    a_bn: "হ্যাঁ। প্রতিদিন সকাল ৯:০০ থেকে রাত ১০:০০ পর্যন্ত হটলাইনে কল করুন, আমাদের স্থানীয় সাপোর্ট টিম সাথে সাথে সাহায্য করবে।"
   }
 ];
 

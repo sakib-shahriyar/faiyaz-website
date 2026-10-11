@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bn">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Faiyaz Communication — Fast, Reliable Internet</title>
+  <title data-i18n="title.home">ফাইয়াজ কমিউনিকেশন — দ্রুত, নির্ভরযোগ্য ইন্টারনেট</title>
   <meta name="description" content="Faiyaz Communication — fast, reliable fiber internet for home and business. View packages, pay your bill online, or contact our support team.">
   <link rel="icon" type="image/png" href="assets/favicon.png">
   <link rel="stylesheet" href="css/style.css">
@@ -14,19 +14,24 @@
 <header class="site-header">
   <div class="container nav-bar">
     <a class="brand" href="index.html">
-      <img src="assets/logo.png" alt="Faiyaz Communication logo">
+      <img src="assets/logo.png" data-i18n-alt="alt.logo" alt="ফাইয়াজ কমিউনিকেশন লোগো">
       <span>FAIYAZ<small>COMMUNICATION</small></span>
     </a>
-    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">
+    <button class="menu-toggle" data-i18n-aria="misc.menu" aria-label="মেনু খুলুন" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
-    <nav class="main-nav" aria-label="Main navigation">
+    <nav class="main-nav" data-i18n-aria="nav.label" aria-label="প্রধান নেভিগেশন">
       <ul>
-        <li><a class="nav-link active" href="index.html">Home</a></li>
-        <li><a class="nav-link" href="packages.html">Packages</a></li>
+        <li><a class="nav-link active" href="index.html" data-i18n="nav.home">হোম</a></li>
+        <li><a class="nav-link" href="packages.html" data-i18n="nav.packages">প্যাকেজ</a></li>
         <li><a class="nav-link" data-ftp href="#">FTP</a></li>
-        <li><a class="nav-link" href="contact.html">Contact</a></li>
-        <li><a class="nav-link paybill-btn" data-paybill href="#">💳 Pay Bill</a></li>
+        <li><a class="nav-link" href="contact.html" data-i18n="nav.contact">যোগাযোগ</a></li>
+        <li><a class="nav-link paybill-btn" data-paybill data-i18n="nav.paybill" href="#">💳 বিল পে করুন</a></li>
+        <li>
+          <span class="lang-switch" role="group" aria-label="Language / ভাষা">
+            <button type="button" data-setlang="bn" class="active">বাং</button><button type="button" data-setlang="en">EN</button>
+          </span>
+        </li>
       </ul>
     </nav>
   </div>
@@ -36,21 +41,21 @@
 <section class="hero">
   <div class="container hero-grid">
     <div>
-      <span class="hero-badge"><span class="dot"></span> Now connecting new areas</span>
-      <h1>Blazing-fast fiber internet, <span class="accent">made simple.</span></h1>
+      <span class="hero-badge"><span class="dot"></span><span data-i18n="hero.badge">নতুন এলাকায় সংযোগ চলছে</span></span>
+      <h1 data-i18n-html="hero.title">বজ্রগতির ফাইবার ইন্টারনেট, <span class="accent">এখন হাতের মুঠোয়।</span></h1>
       <p class="lead" data-site="aboutShort"></p>
       <div class="hero-actions">
-        <a class="btn btn-primary" href="packages.html">View Packages</a>
-        <a class="btn btn-outline" data-paybill href="#">💳 Pay Bill Online</a>
+        <a class="btn btn-primary" href="packages.html" data-i18n="hero.packages">প্যাকেজ দেখুন</a>
+        <a class="btn btn-outline" data-paybill data-i18n="hero.paybill" href="#">💳 অনলাইনে বিল পে করুন</a>
       </div>
       <div class="hero-stats">
-        <div class="stat"><b>99%</b><span>Network uptime</span></div>
-        <div class="stat"><b>24–48h</b><span>Installation time</span></div>
-        <div class="stat"><b>7 days</b><span>Support, every week</span></div>
+        <div class="stat"><b>99%</b><span data-i18n="stat.uptime">নেটওয়ার্ক আপটাইম</span></div>
+        <div class="stat"><b>24–48h</b><span data-i18n="stat.install">ইনস্টলেশনের সময়</span></div>
+        <div class="stat"><b>7 days</b><span data-i18n="stat.support">প্রতি সপ্তাহে সাপোর্ট</span></div>
       </div>
     </div>
-    <div class="hero-card reveal" id="featuredPackage">
-      <!-- Filled automatically from site-config.js (the package marked "Most Popular") -->
+    <div class="hero-card reveal" id="packageRotator">
+      <!-- Rotating package showcase: all packages, changes every 2 seconds (built by js/main.js) -->
     </div>
   </div>
 </section>
@@ -59,25 +64,25 @@
 <section>
   <div class="container">
     <div class="section-title reveal">
-      <div class="kicker">Why Faiyaz Communication</div>
-      <h2>Internet without the headaches</h2>
-      <p>No hidden charges, no confusing fine print — just fast internet and people who pick up the phone.</p>
+      <div class="kicker" data-i18n="feat.kicker">কেন ফাইয়াজ কমিউনিকেশন</div>
+      <h2 data-i18n="feat.title">ঝামেলাহীন ইন্টারনেট</h2>
+      <p data-i18n="feat.sub">কোনো লুকানো চার্জ নেই, কোনো জটিল শর্ত নেই — শুধু দ্রুত ইন্টারনেট আর ফোন ধরা মানুষ।</p>
     </div>
     <div class="features">
       <div class="feature-card reveal">
         <div class="feature-icon">🚀</div>
-        <h3>Pure fiber speed</h3>
-        <p>Modern fiber-optic lines deliver the speed you pay for — steady during the day and at peak evening hours.</p>
+        <h3 data-i18n="feat.1t">খাঁটি ফাইবার গতি</h3>
+        <p data-i18n="feat.1d">আধুনিক ফাইবার-অপটিক লাইনে দিনে ও সন্ধ্যার ব্যস্ত সময়েও আপনি যে গতির জন্য পেমেন্ট করছেন, সেই গতিই পাবেন।</p>
       </div>
       <div class="feature-card reveal">
         <div class="feature-icon">♾️</div>
-        <h3>Truly unlimited</h3>
-        <p>Every package comes with unlimited data. Stream, game and work as much as you like — no caps, no slowdowns.</p>
+        <h3 data-i18n="feat.2t">সত্যিকারের আনলিমিটেড</h3>
+        <p data-i18n="feat.2d">প্রতিটি প্যাকেজে আনলিমিটেড ডেটা। যত খুশি স্ট্রিম করুন, গেম খেলুন, কাজ করুন — কোনো ক্যাপ বা স্লোডাউন নেই।</p>
       </div>
       <div class="feature-card reveal">
         <div class="feature-icon">🤝</div>
-        <h3>Local human support</h3>
-        <p>Talk to our own support team, not a call center. Call <a data-site="phone" href="#" style="font-weight:700;color:var(--green-dark)"></a> any day, 9 AM – 10 PM.</p>
+        <h3 data-i18n="feat.3t">স্থানীয় আন্তরিক সাপোর্ট</h3>
+        <p data-i18n-html="feat.3d"></p>
       </div>
     </div>
   </div>
@@ -87,14 +92,14 @@
 <section style="background: var(--soft);">
   <div class="container">
     <div class="section-title reveal">
-      <div class="kicker">Packages</div>
-      <h2>Simple plans, honest prices</h2>
-      <p>Pick the speed that fits your home. Upgrade or downgrade anytime.</p>
+      <div class="kicker" data-i18n="pkg.kicker">প্যাকেজ</div>
+      <h2 data-i18n="pkg.title">সহজ প্ল্যান, সৎ দাম</h2>
+      <p data-i18n="pkg.sub">আপনার বাসার জন্য মানানসই গতি বেছে নিন। যেকোনো সময় আপগ্রেড বা ডাউনগ্রেড করুন।</p>
     </div>
     <!-- data-packages="3" = show the first 3 packages from site-config.js -->
     <div class="packages-grid" data-packages="3"></div>
     <div style="text-align:center; margin-top:36px;" class="reveal">
-      <a class="btn btn-primary" href="packages.html">See All Packages</a>
+      <a class="btn btn-primary" href="packages.html" data-i18n="pkg.seeAll">সব প্যাকেজ দেখুন</a>
     </div>
   </div>
 </section>
@@ -103,24 +108,24 @@
 <section>
   <div class="container">
     <div class="section-title reveal">
-      <div class="kicker">Get connected</div>
-      <h2>Online in 3 easy steps</h2>
+      <div class="kicker" data-i18n="step.kicker">সংযোগ নিন</div>
+      <h2 data-i18n="step.title">৩টি সহজ ধাপে অনলাইনে আসুন</h2>
     </div>
     <div class="steps">
       <div class="step reveal">
         <div class="num">1</div>
-        <h3>Choose your package</h3>
-        <p>Browse the packages and pick the speed that suits your family or business.</p>
+        <h3 data-i18n="step.1t">প্যাকেজ বেছে নিন</h3>
+        <p data-i18n="step.1d">প্যাকেজগুলো দেখুন এবং আপনার পরিবার বা ব্যবসার জন্য উপযুক্ত গতি বেছে নিন।</p>
       </div>
       <div class="step reveal">
         <div class="num">2</div>
-        <h3>Call or message us</h3>
-        <p>Reach us on <a data-site="phone" href="#" style="font-weight:700;color:var(--green-dark)"></a> or WhatsApp and share your address.</p>
+        <h3 data-i18n="step.2t">কল বা মেসেজ করুন</h3>
+        <p data-i18n-html="step.2d"></p>
       </div>
       <div class="step reveal">
         <div class="num">3</div>
-        <h3>We install, you relax</h3>
-        <p>Our technician sets everything up within 24–48 hours. Pay your bill online anytime.</p>
+        <h3 data-i18n="step.3t">আমরা ইনস্টল করব, আপনি নিশ্চিন্ত থাকুন</h3>
+        <p data-i18n="step.3d">২৪–৪৮ ঘণ্টার মধ্যে আমাদের টেকনিশিয়ান সম্পূর্ণ সেটআপ করে দেবে। যেকোনো সময় অনলাইনে বিল পে করুন।</p>
       </div>
     </div>
   </div>
@@ -130,8 +135,8 @@
 <section style="background: var(--soft);">
   <div class="container">
     <div class="section-title reveal">
-      <div class="kicker">FAQ</div>
-      <h2>Questions, answered</h2>
+      <div class="kicker" data-i18n="faq.kicker">সাধারণ জিজ্ঞাসা</div>
+      <h2 data-i18n="faq.title">প্রশ্ন ও উত্তর</h2>
     </div>
     <div class="faq-list" data-faq></div>
   </div>
@@ -141,9 +146,9 @@
 <section>
   <div class="container">
     <div class="cta-banner reveal">
-      <h2>Your bill is one click away</h2>
-      <p>Pay securely with bKash, Nagad, Rocket or cards through our customer portal.</p>
-      <a class="btn" data-paybill href="#">💳 Pay Bill Now</a>
+      <h2 data-i18n="cta.title">আপনার বিল মাত্র এক ক্লিক দূরে</h2>
+      <p data-i18n="cta.sub">আমাদের নিরাপদ কাস্টমার পোর্টাল থেকে বিকাশ, নগদ, রকেট বা কার্ড দিয়ে পেমেন্ট করুন।</p>
+      <a class="btn" data-paybill data-i18n="cta.btn" href="#">💳 এখনই বিল পে করুন</a>
     </div>
   </div>
 </section>
@@ -153,21 +158,21 @@
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <img src="assets/logo.png" alt="Faiyaz Communication logo">
+        <img src="assets/logo.png" data-i18n-alt="alt.logo" alt="ফাইয়াজ কমিউনিকেশন লোগো">
         <p data-site="aboutShort"></p>
       </div>
       <div>
-        <h4>Quick Links</h4>
+        <h4 data-i18n="foot.links">দ্রুত লিংক</h4>
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="packages.html">Packages</a></li>
-          <li><a data-ftp href="#">FTP Server</a></li>
-          <li><a data-paybill href="#">Pay Bill</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="index.html" data-i18n="nav.home">হোম</a></li>
+          <li><a href="packages.html" data-i18n="nav.packages">প্যাকেজ</a></li>
+          <li><a data-ftp data-i18n="foot.ftp" href="#">FTP সার্ভার</a></li>
+          <li><a data-paybill data-i18n="nav.paybill" href="#">💳 বিল পে করুন</a></li>
+          <li><a href="contact.html" data-i18n="nav.contact">যোগাযোগ</a></li>
         </ul>
       </div>
       <div>
-        <h4>Contact</h4>
+        <h4 data-i18n="foot.contact">যোগাযোগ</h4>
         <ul>
           <li>📞 <a data-site="phone" href="#"></a></li>
           <li>✉️ <a data-site="email" href="#"></a></li>
@@ -177,15 +182,16 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© <span data-year></span> <span data-site="name"></span>. All rights reserved.</span>
+      <span>© <span data-year></span> <span data-site="name"></span>. <span data-i18n="foot.rights">সর্বস্বত্ব সংরক্ষিত।</span></span>
       <span>fccloud.net</span>
     </div>
   </div>
 </footer>
 
-<button id="backToTop" aria-label="Back to top">↑</button>
+<button id="backToTop" data-i18n-aria="misc.top" aria-label="উপরে যান">↑</button>
 
 <script src="js/site-config.js"></script>
+<script src="js/i18n.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>

@@ -1,6 +1,7 @@
 /* =====================================================================
    FAIYAZ COMMUNICATION — website behavior
-   You do NOT need to edit this file. Change content in site-config.js.
+   You do NOT need to edit this file. Change content in site-config.js
+   (company info, packages, FAQ) and js/i18n.js (Bangla/English text).
    ===================================================================== */
 
 (function () {
@@ -9,41 +10,100 @@
   var site = window.SITE || {};
   var packages = window.PACKAGES || [];
   var faqs = window.FAQS || [];
+  var STR = window.I18N || { bn: {}, en: {} };
 
-  /* ---------- Fill contact details everywhere (elements with data-site="...") ---------- */
-  var siteMap = {
-    phone: site.phone, phoneDisplay: site.phoneDisplay, email: site.email,
-    address: site.address, hours: site.hours, name: site.name, tagline: site.tagline
-  };
-  document.querySelectorAll("[data-site]").forEach(function (el) {
-    var key = el.getAttribute("data-site");
-    if (siteMap[key]) {
-      if (el.tagName === "A" && (key === "phone" || key === "email")) {
-        el.href = (key === "phone" ? "tel:" : "mailto:") + siteMap[key];
+  /* ---------- Language: Bangla default, remembered per visitor ---------- */
+  var lang = "bn";
+  try { lang = localStorage.getItem("fc-lang") || "bn"; } catch (e) { lang = "bn"; }
+  if (lang !== "bn" && lang !== "en") lang = "bn";
+
+  function t(key) {
+    if (STR[lang] && STR[lang][key] !== undefined) return STR[lang][key];
+    if (STR.en && STR.en[key] !== undefined) return STR.en[key];
+    return key;
+  }
+
+  function fillPlaceholders(s) {
+    return String(s)
+      .replace(/{{phone}}/g, site.phoneDisplay || site.phone || "")
+      .replace(/{{phoneRaw}}/g, site.phone || "");
+  }
+
+  /* Apply translations to everything tagged with data-i18n* attributes */
+  function applyI18n() {
+    document.querySelectorAll("[data-i18n]").forEach(function (el) {
+      el.textContent = fillPlaceholders(t(el.getAttribute("data-i18n")));
+    });
+    document.querySelectorAll("[data-i18n-html]").forEach(function (el) {
+      el.innerHTML = fillPlaceholders(t(el.getAttribute("data-i18n-html")));
+    });
+    document.querySelectorAll("[data-i18n-ph]").forEach(function (el) {
+      el.setAttribute("placeholder", fillPlaceholders(t(el.getAttribute("data-i18n-ph"))));
+    });
+    document.querySelectorAll("[data-i18n-aria]").forEach(function (el) {
+      el.setAttribute("aria-label", fillPlaceholders(t(el.getAttribute("data-i18n-aria"))));
+    });
+    document.querySelectorAll("[data-i18n-alt]").forEach(function (el) {
+      el.setAttribute("alt", fillPlaceholders(t(el.getAttribute("data-i18n-alt"))));
+    });
+    document.documentElement.setAttribute("lang", lang);
+    document.querySelectorAll("[data-setlang]").forEach(function (btn) {
+      btn.classList.toggle("active", btn.getAttribute("data-setlang") === lang);
+    });
+  }
+
+  /* ---------- Fill company details (elements with data-site="...") ---------- */
+  function fillSite() {
+    var siteMap = {
+      phone: site.phone, phoneDisplay: site.phoneDisplay, email: site.email,
+      address: site.address, hours: site.hours, name: site.name, tagline: site.tagline,
+      aboutShort: (lang === "bn" && site.aboutShortBn) ? site.aboutShortBn : site.aboutShort
+    };
+    document.querySelectorAll("[data-site]").forEach(function (el) {
+      var key = el.getAttribute("data-site");
+      if (siteMap[key]) {
+        if (el.tagName === "A" && (key === "phone" || key === "email")) {
+          el.href = (key === "phone" ? "tel:" : "mailto:") + siteMap[key];
+        }
+        el.textContent = siteMap[key];
       }
-      el.textContent = siteMap[key];
-    }
-  });
+    });
+  }
 
-  /* ---------- Pay Bill links: point to the live customer portal ---------- */
-  document.querySelectorAll("[data-paybill]").forEach(function (el) {
-    el.setAttribute("href", site.billPortalUrl || "https://user.fccloud.net");
-    el.setAttribute("target", "_blank");
-    el.setAttribute("rel", "noopener");
-  });
+  /* ---------- External links: Pay Bill portal, FTP server, WhatsApp ---------- */
+  function wireLinks() {
+    document.querySelectorAll("[data-paybill]").forEach(function (el) {
+      el.setAttribute("href", site.billPortalUrl || "https://user.fccloud.net");
+      el.setAttribute("target", "_blank");
+      el.setAttribute("rel", "noopener");
+    });
+    document.querySelectorAll("[data-ftp]").forEach(function (el) {
+      el.setAttribute("href", site.ftpUrl || "http://172.16.200.200");
+      el.setAttribute("target", "_blank");
+      el.setAttribute("rel", "noopener");
+    });
+    document.querySelectorAll("[data-whatsapp]").forEach(function (el) {
+      el.setAttribute("href", "https://wa.me/" + (site.whatsapp || ""));
+      el.setAttribute("target", "_blank");
+      el.setAttribute("rel", "noopener");
+    });
+  }
 
-  /* ---------- FTP links: point to the company's FTP server ---------- */
-  document.querySelectorAll("[data-ftp]").forEach(function (el) {
-    el.setAttribute("href", site.ftpUrl || "http://172.16.200.200");
-    el.setAttribute("target", "_blank");
-    el.setAttribute("rel", "noopener");
-  });
-
-  /* ---------- WhatsApp links ---------- */
-  document.querySelectorAll("[data-whatsapp]").forEach(function (el) {
-    el.setAttribute("href", "https://wa.me/" + (site.whatsapp || ""));
-    el.setAttribute("target", "_blank");
-    el.setAttribute("rel", "noopener");
+  /* ---------- Language switcher ---------- */
+  function setLang(l) {
+    if (l !== "bn" && l !== "en") return;
+    lang = l;
+    try { localStorage.setItem("fc-lang", l); } catch (e) {}
+    applyI18n();
+    wireLinks();
+    fillSite();
+    renderPackages();
+    renderRotator();
+    renderFaq();
+    observeReveals();
+  }
+  document.querySelectorAll("[data-setlang]").forEach(function (btn) {
+    btn.addEventListener("click", function () { setLang(btn.getAttribute("data-setlang")); });
   });
 
   /* ---------- Header shadow on scroll ---------- */
@@ -78,9 +138,9 @@
         badge +
         '<div class="pkg-name">' + escapeHtml(p.name) + "</div>" +
         '<div class="pkg-speed">' + p.speed + " <small>Mbps</small></div>" +
-        '<div class="pkg-price"><b>৳' + p.price + "</b> <span>/month</span></div>" +
+        '<div class="pkg-price"><b>৳' + p.price + "</b> <span>" + escapeHtml(t("pkg.perMonth")) + "</span></div>" +
         "<ul>" + features + "</ul>" +
-        '<a class="btn btn-outline" style="width:100%" href="contact.html">Get this package</a>' +
+        '<a class="btn btn-outline" style="width:100%" href="contact.html">' + escapeHtml(t("pkg.get")) + "</a>" +
       "</article>"
     );
   }
@@ -93,6 +153,79 @@
     });
     observeReveals();
   }
+
+  /* ---------- Home hero: rotating package showcase (changes every 2 sec) ---------- */
+  function renderRotator() {
+    var slot = document.getElementById("packageRotator");
+    if (!slot || !packages.length) return;
+
+    /* stop the previous rotation timer before re-rendering (e.g. language switch) */
+    if (slot._stopRot) { slot._stopRot(); slot._stopRot = null; }
+    var startIdx = slot._rotIdx || 0;
+    if (startIdx >= packages.length) startIdx = 0;
+
+    var slidesHtml = packages.map(function (p, i) {
+      var badge = p.badge ? '<span class="package-badge">' + escapeHtml(p.badge) + "</span>" : "";
+      return (
+        '<div class="rot-slide' + (i === startIdx ? " active" : "") + '">' + badge +
+          '<div class="speed-big">' + p.speed + ' <small>Mbps</small></div>' +
+          "<h3>" + escapeHtml(p.name) + "</h3>" +
+          '<div class="price-row"><b>৳' + p.price + ' <small>' + escapeHtml(t("pkg.perMonth")) + "</small></b></div>" +
+          '<a class="btn btn-primary" style="width:100%" href="contact.html">' + escapeHtml(t("rot.getPlan")) + "</a>" +
+        "</div>"
+      );
+    }).join("");
+
+    var dotsHtml = packages.map(function (p, i) {
+      return '<button type="button" class="rot-dot' + (i === startIdx ? " active" : "") +
+        '" data-i="' + i + '" aria-label="' + escapeHtml(p.name) + " " + p.speed + ' Mbps"></button>';
+    }).join("");
+
+    slot.innerHTML =
+      '<div class="rot-slides">' + slidesHtml + "</div>" +
+      '<div class="rot-dots">' + dotsHtml + "</div>" +
+      '<a href="packages.html" class="rot-compare">' + escapeHtml(t("rot.compare")) + "</a>";
+
+    var slides = slot.querySelectorAll(".rot-slide");
+    var dots = slot.querySelectorAll(".rot-dot");
+    var idx = startIdx;
+    var timer = null;
+
+    function show(n) {
+      idx = (n + slides.length) % slides.length;
+      slot._rotIdx = idx;
+      slides.forEach(function (s, i) { s.classList.toggle("active", i === idx); });
+      dots.forEach(function (d, i) { d.classList.toggle("active", i === idx); });
+    }
+    function start() {
+      stop();
+      timer = setInterval(function () { show(idx + 1); }, 2000);
+    }
+    function stop() {
+      if (timer) { clearInterval(timer); timer = null; }
+    }
+
+    dots.forEach(function (d) {
+      d.addEventListener("click", function () {
+        show(parseInt(d.getAttribute("data-i"), 10));
+        start();
+      });
+    });
+    slot.onmouseenter = stop;
+    slot.onmouseleave = start;
+
+    slot._stopRot = stop;
+    rotCtl = { stop: stop, start: start };
+    observeReveals();
+    start();
+  }
+
+  /* one shared tab-visibility handler for the rotator (no duplicate listeners) */
+  var rotCtl = null;
+  document.addEventListener("visibilitychange", function () {
+    if (!rotCtl) return;
+    if (document.hidden) { rotCtl.stop(); } else { rotCtl.start(); }
+  });
 
   /* ---------- Speed filter (Packages page) ---------- */
   var chips = document.querySelectorAll(".chip[data-filter]");
@@ -111,16 +244,18 @@
     });
   });
 
-  /* ---------- FAQ accordion (rendered from site-config.js) ---------- */
+  /* ---------- FAQ accordion (rendered from site-config.js, bilingual) ---------- */
   function renderFaq() {
     var list = document.querySelector("[data-faq]");
     if (!list) return;
     list.innerHTML = faqs.map(function (item) {
+      var q = (lang === "bn" && item.q_bn) ? item.q_bn : item.q;
+      var a = (lang === "bn" && item.a_bn) ? item.a_bn : item.a;
       return (
         '<div class="faq-item reveal">' +
-          '<button class="faq-q" type="button">' + escapeHtml(item.q) +
+          '<button class="faq-q" type="button">' + escapeHtml(q) +
             '<span class="arrow">▾</span></button>' +
-          '<div class="faq-a"><p>' + escapeHtml(item.a) + "</p></div>" +
+          '<div class="faq-a"><p>' + escapeHtml(a) + "</p></div>" +
         "</div>"
       );
     }).join("");
@@ -152,12 +287,15 @@
       var topic = form.topic.value;
       var msg = form.message.value.trim();
       if (!name || !phone || !msg) {
-        alert("Please fill in your name, phone number and message.");
+        alert(t("form.alert"));
         return;
       }
-      var subject = encodeURIComponent("New connection enquiry — " + topic);
+      var subject = encodeURIComponent(t("form.subPre") + topic);
       var body = encodeURIComponent(
-        "Name: " + name + "\nPhone: " + phone + "\nTopic: " + topic + "\n\nMessage:\n" + msg
+        t("form.lName") + ": " + name + "\n" +
+        t("form.lPhone") + ": " + phone + "\n" +
+        t("form.lTopic") + ": " + topic + "\n\n" +
+        t("form.lMsg") + ":\n" + msg
       );
       window.location.href = "mailto:" + (site.email || "info@fccloud.net") +
         "?subject=" + subject + "&body=" + body;
@@ -208,34 +346,12 @@
     });
   }
 
-  /* ---------- Featured package (home hero card) ---------- */
-  function renderFeatured() {
-    var slot = document.getElementById("featuredPackage");
-    if (!slot || !packages.length) return;
-    var p = packages.find(function (x) { return x.badge === "Most Popular"; }) ||
-            packages.find(function (x) { return x.badge; }) || packages[0];
-    var features = (p.features || []).slice(0, 3).map(function (f) {
-      return "<li>" + escapeHtml(f) + "</li>";
-    }).join("");
-    slot.innerHTML =
-      '<div class="speed-big">' + p.speed + ' <small>Mbps</small></div>' +
-      "<h3>" + escapeHtml(p.name) + " Package</h3>" +
-      "<p>" + (p.badge ? escapeHtml(p.badge) + " — " : "") + "our most loved plan.</p>" +
-      '<div class="price-row"><b>৳' + p.price + " <small>/month</small></b>" +
-      '<span style="color:var(--muted);font-size:0.85rem">Unlimited data</span></div>' +
-      '<a class="btn btn-primary" style="width:100%" data-paybill href="#">Get This Plan</a>' +
-      '<a href="packages.html" style="display:block;text-align:center;margin-top:12px;font-weight:600;color:var(--green-dark);font-size:0.9rem">Compare all packages →</a>';
-    slot.querySelectorAll("[data-paybill]").forEach(function (el) {
-      el.setAttribute("href", site.billPortalUrl || "https://user.fccloud.net");
-      el.setAttribute("target", "_blank");
-      el.setAttribute("rel", "noopener");
-    });
-    observeReveals();
-  }
-
   /* ---------- go ---------- */
+  applyI18n();
+  wireLinks();
+  fillSite();
   renderPackages();
-  renderFeatured();
+  renderRotator();
   renderFaq();
   observeReveals();
 })();

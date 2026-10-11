@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bn">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact — Faiyaz Communication</title>
+  <title data-i18n="title.contact">যোগাযোগ — ফাইয়াজ কমিউনিকেশন</title>
   <meta name="description" content="Contact Faiyaz Communication — call, WhatsApp, email or send us a message for a new connection or support.">
   <link rel="icon" type="image/png" href="assets/favicon.png">
   <link rel="stylesheet" href="css/style.css">
@@ -14,19 +14,24 @@
 <header class="site-header">
   <div class="container nav-bar">
     <a class="brand" href="index.html">
-      <img src="assets/logo.png" alt="Faiyaz Communication logo">
+      <img src="assets/logo.png" data-i18n-alt="alt.logo" alt="ফাইয়াজ কমিউনিকেশন লোগো">
       <span>FAIYAZ<small>COMMUNICATION</small></span>
     </a>
-    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">
+    <button class="menu-toggle" data-i18n-aria="misc.menu" aria-label="মেনু খুলুন" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
-    <nav class="main-nav" aria-label="Main navigation">
+    <nav class="main-nav" data-i18n-aria="nav.label" aria-label="প্রধান নেভিগেশন">
       <ul>
-        <li><a class="nav-link" href="index.html">Home</a></li>
-        <li><a class="nav-link" href="packages.html">Packages</a></li>
+        <li><a class="nav-link" href="index.html" data-i18n="nav.home">হোম</a></li>
+        <li><a class="nav-link" href="packages.html" data-i18n="nav.packages">প্যাকেজ</a></li>
         <li><a class="nav-link" data-ftp href="#">FTP</a></li>
-        <li><a class="nav-link active" href="contact.html">Contact</a></li>
-        <li><a class="nav-link paybill-btn" data-paybill href="#">💳 Pay Bill</a></li>
+        <li><a class="nav-link active" href="contact.html" data-i18n="nav.contact">যোগাযোগ</a></li>
+        <li><a class="nav-link paybill-btn" data-paybill data-i18n="nav.paybill" href="#">💳 বিল পে করুন</a></li>
+        <li>
+          <span class="lang-switch" role="group" aria-label="Language / ভাষা">
+            <button type="button" data-setlang="bn" class="active">বাং</button><button type="button" data-setlang="en">EN</button>
+          </span>
+        </li>
       </ul>
     </nav>
   </div>
@@ -35,8 +40,8 @@
 <!-- ================= PAGE HERO ================= -->
 <section class="page-hero">
   <div class="container">
-    <h1>Get in Touch</h1>
-    <p>New connection, billing question or support — reach us any way you like. We reply fast.</p>
+    <h1 data-i18n="ct.title">যোগাযোগ করুন</h1>
+    <p data-i18n="ct.sub">নতুন সংযোগ, বিলিং প্রশ্ন বা সাপোর্ট — যেকোনোভাবে আমাদের সাথে যোগাযোগ করুন। আমরা দ্রুত সাড়া দিই।</p>
   </div>
 </section>
 
@@ -48,30 +53,30 @@
       <div class="contact-card reveal">
         <div class="icon">📞</div>
         <div>
-          <h3>Hotline</h3>
+          <h3 data-i18n="ct.hotline">হটলাইন</h3>
           <a class="val" data-site="phone" href="#" style="font-weight:700; color: var(--green-dark); font-size:1.1rem;"></a>
-          <p>Call any day, 9:00 AM – 10:00 PM</p>
+          <p data-i18n="ct.hotlineSub">প্রতিদিন কল করুন, সকাল ৯:০০ – রাত ১০:০০</p>
         </div>
       </div>
       <div class="contact-card reveal">
         <div class="icon">💬</div>
         <div>
-          <h3>WhatsApp</h3>
-          <p>Chat with us instantly</p>
-          <a class="btn btn-primary" data-whatsapp href="#" style="margin-top:10px; padding:10px 22px;">Message on WhatsApp</a>
+          <h3 data-i18n="ct.wa">হোয়াটসঅ্যাপ</h3>
+          <p data-i18n="ct.waSub">আমাদের সাথে সরাসরি চ্যাট করুন</p>
+          <a class="btn btn-primary" data-whatsapp data-i18n="ct.waBtn" href="#" style="margin-top:10px; padding:10px 22px;">হোয়াটসঅ্যাপে মেসেজ করুন</a>
         </div>
       </div>
       <div class="contact-card reveal">
         <div class="icon">✉️</div>
         <div>
-          <h3>Email</h3>
+          <h3 data-i18n="ct.email">ইমেইল</h3>
           <a class="val" data-site="email" href="#"></a>
         </div>
       </div>
       <div class="contact-card reveal">
         <div class="icon">📍</div>
         <div>
-          <h3>Office</h3>
+          <h3 data-i18n="ct.office">অফিস</h3>
           <p data-site="address"></p>
           <p data-site="hours"></p>
         </div>
@@ -84,36 +89,34 @@
     </div>
 
     <div class="form-card reveal">
-      <h2>Send us a message</h2>
-      <p>Fill this in and it will open your email app with everything pre-written — just press send.</p>
+      <h2 data-i18n="ct.formTitle">আমাদের একটি মেসেজ পাঠান</h2>
+      <p data-i18n="ct.formSub">ফর্মটি পূরণ করুন — আপনার ইমেইল অ্যাপে সবকিছু লেখা অবস্থায় খুলবে, শুধু সেন্ড চাপুন।</p>
       <form id="contactForm" novalidate>
         <div class="field">
-          <label for="fName">Your name</label>
-          <input id="fName" name="name" type="text" placeholder="e.g. Rahim Uddin" required>
+          <label for="fName" data-i18n="ct.name">আপনার নাম</label>
+          <input id="fName" name="name" type="text" data-i18n-ph="ct.namePh" placeholder="যেমন: রহিম উদ্দিন" required>
         </div>
         <div class="field">
-          <label for="fPhone">Phone number</label>
-          <input id="fPhone" name="phone" type="tel" placeholder="01XXXXXXXXX" required>
-          <div class="hint">So we can call you back about your request.</div>
+          <label for="fPhone" data-i18n="ct.phone">ফোন নম্বর</label>
+          <input id="fPhone" name="phone" type="tel" data-i18n-ph="ct.phonePh" placeholder="01XXXXXXXXX" required>
+          <div class="hint" data-i18n="ct.phoneHint">যাতে আপনার অনুরোধ সম্পর্কে আমরা কল করে জানাতে পারি।</div>
         </div>
         <div class="field">
-          <label for="fTopic">What is this about?</label>
+          <label for="fTopic" data-i18n="ct.topic">বিষয় কী?</label>
           <select id="fTopic" name="topic">
-            <option>New connection</option>
-            <option>Billing question</option>
-            <option>Technical support</option>
-            <option>Package upgrade</option>
-            <option>Other</option>
+            <option data-i18n="ct.t1">নতুন সংযোগ</option>
+            <option data-i18n="ct.t2">বিলিং সংক্রান্ত প্রশ্ন</option>
+            <option data-i18n="ct.t3">টেকনিক্যাল সাপোর্ট</option>
+            <option data-i18n="ct.t4">প্যাকেজ আপগ্রেড</option>
+            <option data-i18n="ct.t5">অন্যান্য</option>
           </select>
         </div>
         <div class="field">
-          <label for="fMsg">Message</label>
-          <textarea id="fMsg" name="message" placeholder="Tell us what you need…" required></textarea>
+          <label for="fMsg" data-i18n="ct.msg">মেসেজ</label>
+          <textarea id="fMsg" name="message" data-i18n-ph="ct.msgPh" placeholder="আপনার কী প্রয়োজন লিখুন…" required></textarea>
         </div>
-        <button class="btn btn-primary" type="submit" style="width:100%;">Send Message</button>
-        <div class="form-note">
-          Prefer talking? Call <a data-site="phone" href="#" style="font-weight:700;color:var(--green-dark)"></a> —
-          or pay an existing bill instantly with the <a data-paybill href="#" style="font-weight:700;color:var(--green-dark)">Pay Bill</a> button above.
+        <button class="btn btn-primary" type="submit" style="width:100%;" data-i18n="ct.submit">মেসেজ পাঠান</button>
+        <div class="form-note" data-i18n-html="ct.note">
         </div>
       </form>
     </div>
@@ -126,21 +129,21 @@
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <img src="assets/logo.png" alt="Faiyaz Communication logo">
+        <img src="assets/logo.png" data-i18n-alt="alt.logo" alt="ফাইয়াজ কমিউনিকেশন লোগো">
         <p data-site="aboutShort"></p>
       </div>
       <div>
-        <h4>Quick Links</h4>
+        <h4 data-i18n="foot.links">দ্রুত লিংক</h4>
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="packages.html">Packages</a></li>
-          <li><a data-ftp href="#">FTP Server</a></li>
-          <li><a data-paybill href="#">Pay Bill</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="index.html" data-i18n="nav.home">হোম</a></li>
+          <li><a href="packages.html" data-i18n="nav.packages">প্যাকেজ</a></li>
+          <li><a data-ftp data-i18n="foot.ftp" href="#">FTP সার্ভার</a></li>
+          <li><a data-paybill data-i18n="nav.paybill" href="#">💳 বিল পে করুন</a></li>
+          <li><a href="contact.html" data-i18n="nav.contact">যোগাযোগ</a></li>
         </ul>
       </div>
       <div>
-        <h4>Contact</h4>
+        <h4 data-i18n="foot.contact">যোগাযোগ</h4>
         <ul>
           <li>📞 <a data-site="phone" href="#"></a></li>
           <li>✉️ <a data-site="email" href="#"></a></li>
@@ -150,15 +153,16 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© <span data-year></span> <span data-site="name"></span>. All rights reserved.</span>
+      <span>© <span data-year></span> <span data-site="name"></span>. <span data-i18n="foot.rights">সর্বস্বত্ব সংরক্ষিত।</span></span>
       <span>fccloud.net</span>
     </div>
   </div>
 </footer>
 
-<button id="backToTop" aria-label="Back to top">↑</button>
+<button id="backToTop" data-i18n-aria="misc.top" aria-label="উপরে যান">↑</button>
 
 <script src="js/site-config.js"></script>
+<script src="js/i18n.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>

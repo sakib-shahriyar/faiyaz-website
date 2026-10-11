@@ -10,9 +10,19 @@ WHAT'S INSIDE
   contact.html        Contact page (info cards + message form)
   css/style.css       All styling (colors are at the top of the file)
   js/site-config.js   ★ EDIT THIS FILE for prices, phone, packages, FAQ
+  js/i18n.js          ★ EDIT THIS FILE for Bangla/English website text
   js/main.js          Website behavior (you don't need to touch this)
   assets/logo.png     Your logo (replace this file to change the logo)
   assets/favicon.png  Small browser-tab icon (auto-made from your logo)
+
+  LANGUAGES: the site opens in Bangla by default. Visitors switch with
+  the বাং / EN buttons in the menu; their choice is remembered.
+  To change any Bangla or English wording, open js/i18n.js, find the
+  "key" (e.g. nav.home) and edit the text after "bn:" or "en:".
+
+  HOME PACKAGE SHOWCASE: the card next to the headline automatically
+  cycles through ALL your packages every 2 seconds (pauses when the
+  mouse hovers over it). Dots below it jump to any package.
 
 HOW TO EDIT THE WEBSITE (the easy way)
 ---------------------------------------

@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bn">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Packages — Faiyaz Communication</title>
+  <title data-i18n="title.packages">প্যাকেজ — ফাইয়াজ কমিউনিকেশন</title>
   <meta name="description" content="Internet packages from Faiyaz Communication — simple plans with unlimited data and honest prices.">
   <link rel="icon" type="image/png" href="assets/favicon.png">
   <link rel="stylesheet" href="css/style.css">
@@ -14,19 +14,24 @@
 <header class="site-header">
   <div class="container nav-bar">
     <a class="brand" href="index.html">
-      <img src="assets/logo.png" alt="Faiyaz Communication logo">
+      <img src="assets/logo.png" data-i18n-alt="alt.logo" alt="ফাইয়াজ কমিউনিকেশন লোগো">
       <span>FAIYAZ<small>COMMUNICATION</small></span>
     </a>
-    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">
+    <button class="menu-toggle" data-i18n-aria="misc.menu" aria-label="মেনু খুলুন" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
-    <nav class="main-nav" aria-label="Main navigation">
+    <nav class="main-nav" data-i18n-aria="nav.label" aria-label="প্রধান নেভিগেশন">
       <ul>
-        <li><a class="nav-link" href="index.html">Home</a></li>
-        <li><a class="nav-link active" href="packages.html">Packages</a></li>
+        <li><a class="nav-link" href="index.html" data-i18n="nav.home">হোম</a></li>
+        <li><a class="nav-link active" href="packages.html" data-i18n="nav.packages">প্যাকেজ</a></li>
         <li><a class="nav-link" data-ftp href="#">FTP</a></li>
-        <li><a class="nav-link" href="contact.html">Contact</a></li>
-        <li><a class="nav-link paybill-btn" data-paybill href="#">💳 Pay Bill</a></li>
+        <li><a class="nav-link" href="contact.html" data-i18n="nav.contact">যোগাযোগ</a></li>
+        <li><a class="nav-link paybill-btn" data-paybill data-i18n="nav.paybill" href="#">💳 বিল পে করুন</a></li>
+        <li>
+          <span class="lang-switch" role="group" aria-label="Language / ভাষা">
+            <button type="button" data-setlang="bn" class="active">বাং</button><button type="button" data-setlang="en">EN</button>
+          </span>
+        </li>
       </ul>
     </nav>
   </div>
@@ -35,8 +40,8 @@
 <!-- ================= PAGE HERO ================= -->
 <section class="page-hero">
   <div class="container">
-    <h1>Our Packages</h1>
-    <p>All plans include unlimited data, free installation support and friendly local service. Prices in Taka per month.</p>
+    <h1 data-i18n="ph.title">আমাদের প্যাকেজ</h1>
+    <p data-i18n="ph.sub">সব প্ল্যানে আনলিমিটেড ডেটা, ফ্রি ইনস্টলেশন সাপোর্ট ও বন্ধুসুলভ স্থানীয় সেবা রয়েছে। দাম প্রতি মাসে টাকায়।</p>
   </div>
 </section>
 
@@ -44,18 +49,15 @@
 <section style="padding-top: 20px;">
   <div class="container">
     <div class="filter-row reveal">
-      <button class="chip active" data-filter="all" type="button">All speeds</button>
-      <button class="chip" data-filter="basic" type="button">Up to 30 Mbps</button>
-      <button class="chip" data-filter="mid" type="button">40 – 60 Mbps</button>
-      <button class="chip" data-filter="fast" type="button">70+ Mbps</button>
+      <button class="chip active" data-filter="all" type="button" data-i18n="chip.all">সব গতি</button>
+      <button class="chip" data-filter="basic" type="button" data-i18n="chip.basic">30 Mbps পর্যন্ত</button>
+      <button class="chip" data-filter="mid" type="button" data-i18n="chip.mid">40 – 60 Mbps</button>
+      <button class="chip" data-filter="fast" type="button" data-i18n="chip.fast">70+ Mbps</button>
     </div>
     <!-- data-packages with no number = show ALL packages from site-config.js -->
     <div class="packages-grid" data-packages></div>
 
-    <div class="form-note reveal" style="margin-top: 40px; text-align: center;">
-      Need a custom plan for your office, shop or apartment building?
-      <a href="contact.html" style="font-weight:700; color: var(--green-dark);">Talk to us</a> —
-      we'll build one around your needs.
+    <div class="form-note reveal" style="margin-top: 40px; text-align: center;" data-i18n-html="ph.note">
     </div>
   </div>
 </section>
@@ -64,9 +66,9 @@
 <section>
   <div class="container">
     <div class="cta-banner reveal">
-      <h2>Already a customer?</h2>
-      <p>Pay your monthly bill in under a minute through our secure customer portal.</p>
-      <a class="btn" data-paybill href="#">💳 Pay Bill Now</a>
+      <h2 data-i18n="cta2.title">ইতিমধ্যে গ্রাহক?</h2>
+      <p data-i18n="cta2.sub">আমাদের নিরাপদ কাস্টমার পোর্টাল থেকে এক মিনিটেরও কম সময়ে মাসিক বিল পে করুন।</p>
+      <a class="btn" data-paybill data-i18n="cta.btn" href="#">💳 এখনই বিল পে করুন</a>
     </div>
   </div>
 </section>
@@ -76,21 +78,21 @@
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <img src="assets/logo.png" alt="Faiyaz Communication logo">
+        <img src="assets/logo.png" data-i18n-alt="alt.logo" alt="ফাইয়াজ কমিউনিকেশন লোগো">
         <p data-site="aboutShort"></p>
       </div>
       <div>
-        <h4>Quick Links</h4>
+        <h4 data-i18n="foot.links">দ্রুত লিংক</h4>
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="packages.html">Packages</a></li>
-          <li><a data-ftp href="#">FTP Server</a></li>
-          <li><a data-paybill href="#">Pay Bill</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="index.html" data-i18n="nav.home">হোম</a></li>
+          <li><a href="packages.html" data-i18n="nav.packages">প্যাকেজ</a></li>
+          <li><a data-ftp data-i18n="foot.ftp" href="#">FTP সার্ভার</a></li>
+          <li><a data-paybill data-i18n="nav.paybill" href="#">💳 বিল পে করুন</a></li>
+          <li><a href="contact.html" data-i18n="nav.contact">যোগাযোগ</a></li>
         </ul>
       </div>
       <div>
-        <h4>Contact</h4>
+        <h4 data-i18n="foot.contact">যোগাযোগ</h4>
         <ul>
           <li>📞 <a data-site="phone" href="#"></a></li>
           <li>✉️ <a data-site="email" href="#"></a></li>
@@ -100,15 +102,16 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© <span data-year></span> <span data-site="name"></span>. All rights reserved.</span>
+      <span>© <span data-year></span> <span data-site="name"></span>. <span data-i18n="foot.rights">সর্বস্বত্ব সংরক্ষিত।</span></span>
       <span>fccloud.net</span>
     </div>
   </div>
 </footer>
 
-<button id="backToTop" aria-label="Back to top">↑</button>
+<button id="backToTop" data-i18n-aria="misc.top" aria-label="উপরে যান">↑</button>
 
 <script src="js/site-config.js"></script>
+<script src="js/i18n.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>
