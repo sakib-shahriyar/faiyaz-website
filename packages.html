@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Packages — Faiyaz Communication</title>
+  <meta name="description" content="Internet packages from Faiyaz Communication — simple plans with unlimited data and honest prices.">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ================= HEADER ================= -->
+<header class="site-header">
+  <div class="container nav-bar">
+    <a class="brand" href="index.html">
+      <img src="assets/logo.png" alt="Faiyaz Communication logo">
+      <span>FAIYAZ<small>COMMUNICATION</small></span>
+    </a>
+    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="main-nav" aria-label="Main navigation">
+      <ul>
+        <li><a class="nav-link" href="index.html">Home</a></li>
+        <li><a class="nav-link active" href="packages.html">Packages</a></li>
+        <li><a class="nav-link" href="contact.html">Contact</a></li>
+        <li><a class="nav-link paybill-btn" data-paybill href="#">💳 Pay Bill</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- ================= PAGE HERO ================= -->
+<section class="page-hero">
+  <div class="container">
+    <h1>Our Packages</h1>
+    <p>All plans include unlimited data, free installation support and friendly local service. Prices in Taka per month.</p>
+  </div>
+</section>
+
+<!-- ================= PACKAGES ================= -->
+<section style="padding-top: 20px;">
+  <div class="container">
+    <div class="filter-row reveal">
+      <button class="chip active" data-filter="all" type="button">All speeds</button>
+      <button class="chip" data-filter="basic" type="button">Up to 20 Mbps</button>
+      <button class="chip" data-filter="mid" type="button">20 – 40 Mbps</button>
+      <button class="chip" data-filter="fast" type="button">40+ Mbps</button>
+    </div>
+    <!-- data-packages with no number = show ALL packages from site-config.js -->
+    <div class="packages-grid" data-packages></div>
+
+    <div class="form-note reveal" style="margin-top: 40px; text-align: center;">
+      Need a custom plan for your office, shop or apartment building?
+      <a href="contact.html" style="font-weight:700; color: var(--green-dark);">Talk to us</a> —
+      we'll build one around your needs.
+    </div>
+  </div>
+</section>
+
+<!-- ================= PAY BILL CTA ================= -->
+<section>
+  <div class="container">
+    <div class="cta-banner reveal">
+      <h2>Already a customer?</h2>
+      <p>Pay your monthly bill in under a minute through our secure customer portal.</p>
+      <a class="btn" data-paybill href="#">💳 Pay Bill Now</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="assets/logo.png" alt="Faiyaz Communication logo">
+        <p data-site="aboutShort"></p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="packages.html">Packages</a></li>
+          <li><a data-paybill href="#">Pay Bill</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li>📞 <a data-site="phone" href="#"></a></li>
+          <li>✉️ <a data-site="email" href="#"></a></li>
+          <li>📍 <span data-site="address"></span></li>
+          <li>🕘 <span data-site="hours"></span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span data-year></span> <span data-site="name"></span>. All rights reserved.</span>
+      <span>fccloud.net</span>
+    </div>
+  </div>
+</footer>
+
+<button id="backToTop" aria-label="Back to top">↑</button>
+
+<script src="js/site-config.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

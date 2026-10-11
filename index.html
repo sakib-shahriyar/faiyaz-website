@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Faiyaz Communication — Fast, Reliable Internet</title>
+  <meta name="description" content="Faiyaz Communication — fast, reliable fiber internet for home and business. View packages, pay your bill online, or contact our support team.">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ================= HEADER ================= -->
+<header class="site-header">
+  <div class="container nav-bar">
+    <a class="brand" href="index.html">
+      <img src="assets/logo.png" alt="Faiyaz Communication logo">
+      <span>FAIYAZ<small>COMMUNICATION</small></span>
+    </a>
+    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="main-nav" aria-label="Main navigation">
+      <ul>
+        <li><a class="nav-link active" href="index.html">Home</a></li>
+        <li><a class="nav-link" href="packages.html">Packages</a></li>
+        <li><a class="nav-link" href="contact.html">Contact</a></li>
+        <li><a class="nav-link paybill-btn" data-paybill href="#">💳 Pay Bill</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <span class="hero-badge"><span class="dot"></span> Now connecting new areas</span>
+      <h1>Blazing-fast fiber internet, <span class="accent">made simple.</span></h1>
+      <p class="lead" data-site="aboutShort"></p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="packages.html">View Packages</a>
+        <a class="btn btn-outline" data-paybill href="#">💳 Pay Bill Online</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><b>99%</b><span>Network uptime</span></div>
+        <div class="stat"><b>24–48h</b><span>Installation time</span></div>
+        <div class="stat"><b>7 days</b><span>Support, every week</span></div>
+      </div>
+    </div>
+    <div class="hero-card reveal" id="featuredPackage">
+      <!-- Filled automatically from site-config.js (the package marked "Most Popular") -->
+    </div>
+  </div>
+</section>
+
+<!-- ================= WHY US ================= -->
+<section>
+  <div class="container">
+    <div class="section-title reveal">
+      <div class="kicker">Why Faiyaz Communication</div>
+      <h2>Internet without the headaches</h2>
+      <p>No hidden charges, no confusing fine print — just fast internet and people who pick up the phone.</p>
+    </div>
+    <div class="features">
+      <div class="feature-card reveal">
+        <div class="feature-icon">🚀</div>
+        <h3>Pure fiber speed</h3>
+        <p>Modern fiber-optic lines deliver the speed you pay for — steady during the day and at peak evening hours.</p>
+      </div>
+      <div class="feature-card reveal">
+        <div class="feature-icon">♾️</div>
+        <h3>Truly unlimited</h3>
+        <p>Every package comes with unlimited data. Stream, game and work as much as you like — no caps, no slowdowns.</p>
+      </div>
+      <div class="feature-card reveal">
+        <div class="feature-icon">🤝</div>
+        <h3>Local human support</h3>
+        <p>Talk to our own support team, not a call center. Call <a data-site="phone" href="#" style="font-weight:700;color:var(--green-dark)"></a> any day, 9 AM – 10 PM.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= POPULAR PACKAGES ================= -->
+<section style="background: var(--soft);">
+  <div class="container">
+    <div class="section-title reveal">
+      <div class="kicker">Packages</div>
+      <h2>Simple plans, honest prices</h2>
+      <p>Pick the speed that fits your home. Upgrade or downgrade anytime.</p>
+    </div>
+    <!-- data-packages="3" = show the first 3 packages from site-config.js -->
+    <div class="packages-grid" data-packages="3"></div>
+    <div style="text-align:center; margin-top:36px;" class="reveal">
+      <a class="btn btn-primary" href="packages.html">See All Packages</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= HOW IT WORKS ================= -->
+<section>
+  <div class="container">
+    <div class="section-title reveal">
+      <div class="kicker">Get connected</div>
+      <h2>Online in 3 easy steps</h2>
+    </div>
+    <div class="steps">
+      <div class="step reveal">
+        <div class="num">1</div>
+        <h3>Choose your package</h3>
+        <p>Browse the packages and pick the speed that suits your family or business.</p>
+      </div>
+      <div class="step reveal">
+        <div class="num">2</div>
+        <h3>Call or message us</h3>
+        <p>Reach us on <a data-site="phone" href="#" style="font-weight:700;color:var(--green-dark)"></a> or WhatsApp and share your address.</p>
+      </div>
+      <div class="step reveal">
+        <div class="num">3</div>
+        <h3>We install, you relax</h3>
+        <p>Our technician sets everything up within 24–48 hours. Pay your bill online anytime.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FAQ ================= -->
+<section style="background: var(--soft);">
+  <div class="container">
+    <div class="section-title reveal">
+      <div class="kicker">FAQ</div>
+      <h2>Questions, answered</h2>
+    </div>
+    <div class="faq-list" data-faq></div>
+  </div>
+</section>
+
+<!-- ================= PAY BILL CTA ================= -->
+<section>
+  <div class="container">
+    <div class="cta-banner reveal">
+      <h2>Your bill is one click away</h2>
+      <p>Pay securely with bKash, Nagad, Rocket or cards through our customer portal.</p>
+      <a class="btn" data-paybill href="#">💳 Pay Bill Now</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="assets/logo.png" alt="Faiyaz Communication logo">
+        <p data-site="aboutShort"></p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="packages.html">Packages</a></li>
+          <li><a data-paybill href="#">Pay Bill</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li>📞 <a data-site="phone" href="#"></a></li>
+          <li>✉️ <a data-site="email" href="#"></a></li>
+          <li>📍 <span data-site="address"></span></li>
+          <li>🕘 <span data-site="hours"></span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span data-year></span> <span data-site="name"></span>. All rights reserved.</span>
+      <span>fccloud.net</span>
+    </div>
+  </div>
+</footer>
+
+<button id="backToTop" aria-label="Back to top">↑</button>
+
+<script src="js/site-config.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

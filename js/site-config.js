@@ -1,0 +1,142 @@
+/* =====================================================================
+   FAIYAZ COMMUNICATION — WEBSITE SETTINGS
+   ---------------------------------------------------------------------
+   EDIT ONLY THIS FILE to change almost everything on the website:
+   phone number, address, package prices, FAQ questions, etc.
+
+   HOW TO EDIT:
+   1. Open this file in any text editor (Notepad works fine).
+   2. Change the text between the quotation marks " " — keep the quotes.
+   3. Save the file, then upload it to your hosting. Done.
+
+   RULES (important):
+   - Do NOT delete the quotation marks " " or the commas at line ends.
+   - Keep the square brackets [ ] around the package and FAQ lists.
+   - If the website looks broken after editing, you probably removed a
+     quote or a comma — compare with the backup copy you kept.
+   ===================================================================== */
+
+
+const SITE = {
+
+  // ---- Company basics ----
+  name: "FAIYAZ COMMUNICATION",                 // company name
+  tagline: "Fast, reliable internet for home & business",  // short slogan under the logo
+  aboutShort: "Faiyaz Communication is a local internet service provider bringing fast, stable fiber internet to homes and businesses — backed by friendly, local support.",
+
+  // ---- Contact details (shown on Contact page + footer) ----
+  phone: "01XXXXXXXXX",        // <-- replace with your hotline number
+  phoneDisplay: "01XXX-XXXXXX", // how the number looks on screen (spaces/dashes ok)
+  whatsapp: "8801XXXXXXXXX",   // WhatsApp number, country code + number, NO + sign, NO spaces
+  email: "info@fccloud.net",   // your email address
+  address: "Your office address here",  // <-- replace with real address
+  hours: "Open every day, 9:00 AM – 10:00 PM",
+
+  // ---- Pay Bill ----
+  // Your bill-payment portal is already live. Customers clicking
+  // "Pay Bill" are sent to this address in a new tab.
+  billPortalUrl: "https://user.fccloud.net",
+};
+
+
+/* ---------------------------------------------------------------------
+   INTERNET PACKAGES
+   - Each { ... } block between the [ ] is ONE package card.
+   - To ADD a package: copy one block, paste it below, change the values.
+   - To REMOVE a package: delete its whole { ... } block.
+   - To CHANGE a price: just change the number after price:.
+   - speed = Mbps number (used by the speed filter). price = Taka/month.
+   - "badge" is optional — delete the line if you don't want a label.
+   --------------------------------------------------------------------- */
+
+const PACKAGES = [
+  {
+    name: "Starter",
+    speed: 10,                 // Mbps
+    price: 500,                // Taka per month
+    badge: "",                 // e.g. "Most Popular" — or "" for none
+    features: [
+      "10 Mbps fiber speed",
+      "Unlimited data",
+      "Good for browsing & social media",
+      "Free installation support"
+    ]
+  },
+  {
+    name: "Family",
+    speed: 20,
+    price: 800,
+    badge: "Most Popular",
+    features: [
+      "20 Mbps fiber speed",
+      "Unlimited data",
+      "Smooth HD streaming",
+      "Good for 3–4 devices",
+      "Free installation support"
+    ]
+  },
+  {
+    name: "Power",
+    speed: 30,
+    price: 1050,
+    badge: "",
+    features: [
+      "30 Mbps fiber speed",
+      "Unlimited data",
+      "Smooth 4K streaming",
+      "Good for 5–6 devices",
+      "Priority support"
+    ]
+  },
+  {
+    name: "Pro",
+    speed: 50,
+    price: 1500,
+    badge: "",
+    features: [
+      "50 Mbps fiber speed",
+      "Unlimited data",
+      "Great for gaming & office work",
+      "Good for 8–10 devices",
+      "Priority support"
+    ]
+  }
+];
+
+
+/* ---------------------------------------------------------------------
+   FREQUENTLY ASKED QUESTIONS (shown on the Home page)
+   - To ADD a question: copy one { ... } block and change the text.
+   - To REMOVE: delete the whole { ... } block.
+   --------------------------------------------------------------------- */
+
+const FAQS = [
+  {
+    q: "How do I pay my monthly bill?",
+    a: "Click the “Pay Bill” button at the top of this website. It takes you to our secure customer portal at user.fccloud.net where you can pay with bKash, Nagad, Rocket or cards."
+  },
+  {
+    q: "Is there really no data limit?",
+    a: "Correct. All our packages come with truly unlimited data — no fair-use slowdowns, no hidden caps."
+  },
+  {
+    q: "How long does installation take?",
+    a: "Usually 24–48 hours inside our coverage area. Call our hotline and we will schedule a visit at a time that suits you."
+  },
+  {
+    q: "What do I need for a new connection?",
+    a: "Just your name, mobile number and address. Our team brings the router and handles the full setup for you."
+  },
+  {
+    q: "Do you provide support if the internet goes down?",
+    a: "Yes. Call our hotline any day between 9:00 AM and 10:00 PM and our local support team will help you right away."
+  }
+];
+
+
+/* ---------------------------------------------------------------------
+   DO NOT EDIT BELOW THIS LINE (website code reads the settings above)
+   --------------------------------------------------------------------- */
+window.SITE = SITE;
+window.PACKAGES = PACKAGES;
+window.FAQS = FAQS;
