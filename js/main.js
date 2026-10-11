@@ -32,6 +32,13 @@
     el.setAttribute("rel", "noopener");
   });
 
+  /* ---------- FTP links: point to the company's FTP server ---------- */
+  document.querySelectorAll("[data-ftp]").forEach(function (el) {
+    el.setAttribute("href", site.ftpUrl || "http://172.16.200.200");
+    el.setAttribute("target", "_blank");
+    el.setAttribute("rel", "noopener");
+  });
+
   /* ---------- WhatsApp links ---------- */
   document.querySelectorAll("[data-whatsapp]").forEach(function (el) {
     el.setAttribute("href", "https://wa.me/" + (site.whatsapp || ""));
@@ -73,7 +80,7 @@
         '<div class="pkg-speed">' + p.speed + " <small>Mbps</small></div>" +
         '<div class="pkg-price"><b>৳' + p.price + "</b> <span>/month</span></div>" +
         "<ul>" + features + "</ul>" +
-        '<a class="btn btn-outline" style="width:100%" data-paybill href="#">Choose &amp; Pay</a>' +
+        '<a class="btn btn-outline" style="width:100%" href="contact.html">Get this package</a>' +
       "</article>"
     );
   }
@@ -83,12 +90,6 @@
       var limit = parseInt(grid.getAttribute("data-packages"), 10);
       var list = isNaN(limit) ? packages : packages.slice(0, limit);
       grid.innerHTML = list.map(packageCard).join("");
-      /* fix the pay-bill hrefs inside freshly rendered cards */
-      grid.querySelectorAll("[data-paybill]").forEach(function (el) {
-        el.setAttribute("href", site.billPortalUrl || "https://user.fccloud.net");
-        el.setAttribute("target", "_blank");
-        el.setAttribute("rel", "noopener");
-      });
     });
     observeReveals();
   }

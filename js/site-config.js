@@ -36,6 +36,10 @@ const SITE = {
   // Your bill-payment portal is already live. Customers clicking
   // "Pay Bill" are sent to this address in a new tab.
   billPortalUrl: "https://user.fccloud.net",
+
+  // ---- FTP server ----
+  // The "FTP" button in the top menu opens this address in a new tab.
+  ftpUrl: "http://172.16.200.200",
 };
 
 
