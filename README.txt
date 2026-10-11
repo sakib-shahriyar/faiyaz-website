@@ -38,11 +38,12 @@ HOW TO EDIT THE WEBSITE (the easy way)
 
 NOTE — PLACEHOLDERS TO REPLACE BEFORE GOING LIVE
 -------------------------------------------------
-  • Phone number is currently "01XXXXXXXXX" (site-config.js → phone)
-  • WhatsApp number is "8801XXXXXXXXX" (site-config.js → whatsapp)
-  • Office address is placeholder text (site-config.js → address)
-  • The 4 packages (10/20/30/50 Mbps, ৳500–৳1500) are EXAMPLES —
-    replace with your real packages and prices.
+  • All company details are now LIVE: hotline +880 1303-989230,
+    WhatsApp, faiyazcommunication0@gmail.com,
+    Sreepur Bazar, Sreepur, Gazipur, hours 9 AM – 10 PM,
+    and your 8 real packages (Starter 20 Mbps … Elite 100 Mbps).
+  • To change anything later, edit js/site-config.js and re-upload
+    just that one file.
 
 =====================================================================
   HOW TO HOST ON fccloud.net

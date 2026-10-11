@@ -103,8 +103,8 @@
       document.querySelectorAll(".package-card").forEach(function (card) {
         var s = parseInt(card.getAttribute("data-speed"), 10);
         var show =
-          f === "all" || (f === "basic" && s < 20) ||
-          (f === "mid" && s >= 20 && s < 40) || (f === "fast" && s >= 40);
+          f === "all" || (f === "basic" && s <= 30) ||
+          (f === "mid" && s > 30 && s <= 60) || (f === "fast" && s > 60);
         card.style.display = show ? "" : "none";
       });
     });
@@ -211,7 +211,8 @@
   function renderFeatured() {
     var slot = document.getElementById("featuredPackage");
     if (!slot || !packages.length) return;
-    var p = packages.find(function (x) { return x.badge; }) || packages[0];
+    var p = packages.find(function (x) { return x.badge === "Most Popular"; }) ||
+            packages.find(function (x) { return x.badge; }) || packages[0];
     var features = (p.features || []).slice(0, 3).map(function (f) {
       return "<li>" + escapeHtml(f) + "</li>";
     }).join("");

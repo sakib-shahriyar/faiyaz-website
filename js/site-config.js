@@ -21,15 +21,15 @@ const SITE = {
 
   // ---- Company basics ----
   name: "FAIYAZ COMMUNICATION",                 // company name
-  tagline: "Fast, reliable internet for home & business",  // short slogan under the logo
-  aboutShort: "Faiyaz Communication is a local internet service provider bringing fast, stable fiber internet to homes and businesses — backed by friendly, local support.",
+  tagline: "24x7 Fast, reliable internet for home & business",  // short slogan under the logo
+  aboutShort: "Stay connected 24x7 with the area's fast, reliable internet. Watch live TV, videos and play games with low latency.",
 
   // ---- Contact details (shown on Contact page + footer) ----
-  phone: "01XXXXXXXXX",        // <-- replace with your hotline number
-  phoneDisplay: "01XXX-XXXXXX", // how the number looks on screen (spaces/dashes ok)
-  whatsapp: "8801XXXXXXXXX",   // WhatsApp number, country code + number, NO + sign, NO spaces
-  email: "info@fccloud.net",   // your email address
-  address: "Your office address here",  // <-- replace with real address
+  phone: "+8801303989230",        // used for the tap-to-call link (no spaces)
+  phoneDisplay: "+880 1303-989230", // how the number looks on screen
+  whatsapp: "8801303989230",      // WhatsApp number, country code + number, NO + sign, NO spaces
+  email: "faiyazcommunication0@gmail.com",
+  address: "Sreepur Bazar, Sreepur, Gazipur",
   hours: "Open every day, 9:00 AM – 10:00 PM",
 
   // ---- Pay Bill ----
@@ -52,53 +52,98 @@ const SITE = {
 const PACKAGES = [
   {
     name: "Starter",
-    speed: 10,                 // Mbps
+    speed: 20,                 // Mbps
     price: 500,                // Taka per month
-    badge: "",                 // e.g. "Most Popular" — or "" for none
+    badge: "Entry",            // e.g. "Most Popular" — or "" for none
     features: [
-      "10 Mbps fiber speed",
-      "Unlimited data",
-      "Good for browsing & social media",
-      "Free installation support"
+      "Facebook BDIX 250 Mbps",
+      "YouTube BDIX 250 Mbps",
+      "Own FTP server",
+      "Low latency"
     ]
   },
   {
-    name: "Family",
-    speed: 20,
-    price: 800,
-    badge: "Most Popular",
-    features: [
-      "20 Mbps fiber speed",
-      "Unlimited data",
-      "Smooth HD streaming",
-      "Good for 3–4 devices",
-      "Free installation support"
-    ]
-  },
-  {
-    name: "Power",
+    name: "Lite",
     speed: 30,
-    price: 1050,
+    price: 550,
     badge: "",
     features: [
-      "30 Mbps fiber speed",
-      "Unlimited data",
-      "Smooth 4K streaming",
-      "Good for 5–6 devices",
-      "Priority support"
+      "Facebook BDIX 250 Mbps",
+      "YouTube BDIX 250 Mbps",
+      "Own FTP server",
+      "Low latency"
+    ]
+  },
+  {
+    name: "Standard",
+    speed: 40,
+    price: 650,
+    badge: "",
+    features: [
+      "Facebook BDIX 250 Mbps",
+      "YouTube BDIX 250 Mbps",
+      "Own FTP server",
+      "Low latency"
+    ]
+  },
+  {
+    name: "Plus",
+    speed: 50,
+    price: 750,
+    badge: "Most Popular",
+    features: [
+      "Facebook BDIX 250 Mbps",
+      "YouTube BDIX 250 Mbps",
+      "Own FTP server",
+      "Low latency"
     ]
   },
   {
     name: "Pro",
-    speed: 50,
-    price: 1500,
+    speed: 60,
+    price: 850,
     badge: "",
     features: [
-      "50 Mbps fiber speed",
-      "Unlimited data",
-      "Great for gaming & office work",
-      "Good for 8–10 devices",
-      "Priority support"
+      "Facebook BDIX 250 Mbps",
+      "YouTube BDIX 250 Mbps",
+      "Own FTP server",
+      "Low latency"
+    ]
+  },
+  {
+    name: "Ultra",
+    speed: 70,
+    price: 1050,
+    badge: "Best Value",
+    features: [
+      "Facebook BDIX 250 Mbps",
+      "YouTube BDIX 250 Mbps",
+      "Own FTP server",
+      "Low latency"
+    ]
+  },
+  {
+    name: "Max",
+    speed: 80,
+    price: 1200,
+    badge: "",
+    features: [
+      "Facebook BDIX 250 Mbps",
+      "YouTube BDIX 250 Mbps",
+      "Own FTP server",
+      "Low latency"
+    ]
+  },
+  {
+    name: "Elite",
+    speed: 100,
+    price: 1500,
+    badge: "Elite",
+    features: [
+      "Facebook BDIX 250 Mbps",
+      "YouTube BDIX 250 Mbps",
+      "Own FTP server",
+      "Low latency"
     ]
   }
 ];
